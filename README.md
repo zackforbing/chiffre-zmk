@@ -28,8 +28,6 @@ The keymaps here may still be useful, but you probably want to [add the `zmk-jlw
 Keep in mind that each ZMK "keycode" is made up of a [behavior](https://zmk.dev/docs/features/keymaps#behaviors) which always has an `&` in front (e.g. `&kp` for a **k**ey **p**ress), followed by any details for that behavior.
 Resetting to bootloader is just [`&bootloader`](https://zmk.dev/docs/behaviors/reset) while the letter `Z` is [`&kp Z`](https://zmk.dev/docs/behaviors/key-press). And "select Bluetooth profile #1" is [`&bt BT_SEL 1`](https://zmk.dev/docs/behaviors/bluetooth)). Read [the docs](https://zmk.dev/docs/) closely.
 
-Using [nickcoutsos's in-browser keymap editor](https://nickcoutsos.github.io/keymap-editor), which provides a GUI for editing keymap files, can be very helpful.
-
 ### After disconnecting the keyboard from Bluetooth, it won't reconnect.
 
 #### Forget the Bluetooth connection on both the keyboard and the host, then try re-pairing.
@@ -41,5 +39,5 @@ As a last resort, try flashing the `settings_reset` firmware for your board; thi
 ## Further Troubleshooting Resources
 
 - [ZMK's troubleshooting page](https://zmk.dev/docs/troubleshooting)
-- Stop by #keyboard-help in [MechWild's Discord](https://discord.gg/nfxHnsm)
+- Stop by the jlw channel in [the 40s Discord](https://discord.gg/40percent)
 - Ask the ZMK experts in [ZMK's Discord](https://zmk.dev/community/discord/invite)
