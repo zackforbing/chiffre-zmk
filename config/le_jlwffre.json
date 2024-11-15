@@ -41,5 +41,13 @@
       ]
     }
   },
-  "sensors": []
+  "sensors": [
+    {
+      "ref": "encoder",
+      "name": "encoder",
+      "identifier": "encoder",
+      "compatible": "ec11",
+      "label": "Encoder"
+    }
+  ]
 }
