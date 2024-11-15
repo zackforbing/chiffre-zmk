@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     combos {
@@ -71,7 +71,7 @@
 
         soft_off {
             bindings = <&soft_off>;
-            key-positions = <0 32 9 31>;
+            key-positions = <0 9 31 33>;
         };
 
         bootloader {
@@ -117,7 +117,7 @@
 
         mo_6_right {
             bindings = <&mo 6>;
-            key-positions = <32 33>;
+            key-positions = <33 34>;
         };
 
         studio_unlock {
@@ -243,73 +243,79 @@
 
         base {
             bindings = <
-&kp Q             &kp W         &kp E        &kp R         &kp T            &kp Y       &kp U         &kp I        &kp O        &kp P
-&hml LCTRL A      &hml LALT S   &hml LGUI D  &hsl LSHFT F  &kp G            &kp H       &hsr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SQT
-&kp Z             &kp X         &kp C        &kp V         &kp B            &kp N       &kp M         &com_scln    &pd_cln      &kp FSLH
-&kp TAB      &lt 2 SPACE   &kp C_MUTE        &lt 4 BACKSPACE  &kp DELETE
+&kp Q         &kp W        &kp E        &kp R         &kp T         &kp Y            &kp U         &kp I        &kp O        &kp P
+&hml LCTRL A  &hml LALT S  &hml LGUI D  &hsl LSHFT F  &kp G         &kp H            &hsr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SQT
+&kp Z         &kp X        &kp C        &kp V         &kp B         &kp N            &kp M         &com_scln    &pd_cln      &kp FSLH
+                           &kp TAB      &lt 2 SPACE   &kp C_MUTE    &lt 4 BACKSPACE                &kp DELETE
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         win_base {
             bindings = <
-&trans       &trans  &trans        &trans  &trans  &trans  &trans  &trans        &trans  &trans
-&hml LGUI A  &trans  &hml LCTRL D  &trans  &trans  &trans  &trans  &hmr RCTRL K  &trans  &hmr RGUI SQT
-&trans       &trans  &trans        &trans  &trans  &trans  &trans  &trans        &trans
-&trans       &trans  &trans        &trans  &trans
+&trans       &trans  &trans        &trans  &trans    &trans  &trans  &trans        &trans  &trans
+&hml LGUI A  &trans  &hml LCTRL D  &trans  &trans    &trans  &trans  &hmr RCTRL K  &trans  &hmr RGUI SQT
+&trans       &trans  &trans        &trans  &trans    &trans  &trans  &trans        &trans  &trans
+                     &trans        &trans  &trans    &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         num_sym {
             bindings = <
-&kp N1               &kp N2            &kp N3                  &kp PLUS              &kp MINUS         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp UNDER        &kp PLUS              &kp TILDE
-&hml LCTRL NUMBER_4  &hml LEFT_ALT N5  &hml LGUI LC(NUMBER_6)  &hsl LEFT_SHIFT STAR  &kp SLASH         &kp LEFT_BRACKET      &hsr RIGHT_SHIFT RIGHT_BRACKET  &hmr RGUI MINUS  &hmr RIGHT_ALT EQUAL  &hmr RCTRL GRAVE
-&kp N7               &kp N8            &kp N9                  &kp N0                &kp LG(DOT)       &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LESS_THAN    &kp GREATER_THAN      &kp BSLH
-&lt 6 LS(TAB)        &trans            &trans                  &lt 6 LA(DELETE)      &trans
+&kp N1               &kp N2            &kp N3                  &kp PLUS              &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp UNDER        &kp PLUS              &kp TILDE
+&hml LCTRL NUMBER_4  &hml LEFT_ALT N5  &hml LGUI LC(NUMBER_6)  &hsl LEFT_SHIFT STAR  &kp SLASH      &kp LEFT_BRACKET      &hsr RIGHT_SHIFT RIGHT_BRACKET  &hmr RGUI MINUS  &hmr RIGHT_ALT EQUAL  &hmr RCTRL GRAVE
+&kp N7               &kp N8            &kp N9                  &kp N0                &kp LG(DOT)    &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LESS_THAN    &kp GREATER_THAN      &kp BSLH
+                                       &lt 6 LS(TAB)           &trans                &trans         &lt 6 LA(DELETE)                                      &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         win_num_sym {
             bindings = <
-&trans              &trans  &trans         &trans  &trans  &trans  &trans  &trans            &trans  &trans
-&hml LGUI NUMBER_6  &trans  &hml LCTRL N8  &trans  &trans  &trans  &trans  &hmr RCTRL MINUS  &trans  &hmr RGUI GRAVE
-&trans              &trans  &trans         &trans  &trans  &trans  &trans  &trans            &trans  &trans
-&trans              &trans  &trans         &trans  &trans
+&trans              &trans  &trans         &trans  &trans    &trans  &trans  &trans            &trans  &trans
+&hml LGUI NUMBER_6  &trans  &hml LCTRL N8  &trans  &trans    &trans  &trans  &hmr RCTRL MINUS  &trans  &hmr RGUI GRAVE
+&trans              &trans  &trans         &trans  &trans    &trans  &trans  &trans            &trans  &trans
+                            &trans         &trans  &trans    &trans          &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         nav_fn {
             bindings = <
-&mt LSHIFT PG_UP            &mt LEFT_ALT HOME  &mt LC(LSHIFT) UP_ARROW  &mt LEFT_ALT END     &kp LS(LA(LC(BACKSLASH)))  &trans    &kp F9         &kp F10       &kp F11            &kp F12
-&mt LC(LEFT_CONTROL) PG_DN  &kp LEFT_ARROW     &kp DOWN_ARROW           &kp RIGHT_ARROW      &bksp_del                  &trans    &hsr RSHFT F5  &hmr RGUI F6  &hmr RIGHT_ALT F7  &hmr RCTRL F8
-&kp LG(Z)                   &kp LG(X)          &kp LG(C)                &kp LG(V)            &kp LG(LS(K))              &trans   &kp F1   &kp F2         &kp F3        &kp F4
-&trans                   &lt 6 LA(BACKSPACE)  &trans                    &lt 6 LA(DELETE)     &trans
+&mt LSHIFT PG_UP            &mt LEFT_ALT HOME  &mt LC(LSHIFT) UP_ARROW  &mt LEFT_ALT END     &kp LS(LA(LC(BACKSLASH)))    &trans            &kp F9         &kp F10       &kp F11            &kp F12
+&mt LC(LEFT_CONTROL) PG_DN  &kp LEFT_ARROW     &kp DOWN_ARROW           &kp RIGHT_ARROW      &bksp_del                    &trans            &hsr RSHFT F5  &hmr RGUI F6  &hmr RIGHT_ALT F7  &hmr RCTRL F8
+&kp LG(Z)                   &kp LG(X)          &kp LG(C)                &kp LG(V)            &kp LG(LS(K))                &trans            &kp F1         &kp F2        &kp F3             &kp F4
+                                               &trans                   &lt 6 LA(BACKSPACE)  &trans                       &lt 6 LA(DELETE)                 &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         win_nav_fn {
             bindings = <
-&trans     &trans     &trans     &trans     &trans         &trans  &trans  &trans         &trans  &trans
-&trans     &trans     &trans     &trans     &trans         &trans  &trans  &hmr LCTRL F6  &trans  &hmr LGUI F8
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(K))  &trans  &trans  &trans         &trans  &trans
-&trans     &trans     &trans     &trans     &trans
+&trans     &trans     &trans     &trans     &trans           &trans  &trans  &trans         &trans  &trans
+&trans     &trans     &trans     &trans     &trans           &trans  &trans  &hmr LCTRL F6  &trans  &hmr LGUI F8
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LS(LC(K))    &trans  &trans  &trans         &trans  &trans
+                      &trans     &trans     &trans           &trans          &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Admin {
             bindings = <
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans  &trans  &trans       &trans          &sys_reset
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4  &trans  &trans  &trans       &trans          &bt BT_CLR
-&kp C_VOL_DN   &kp C_VOL_UP   &kp K_MUTE     &trans         &trans         &trans  &trans  &trans       &trans          &bt BT_CLR_ALL
-&trans     &trans     &bootloader         &trans         &trans
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &trans  &trans  &trans  &sys_reset
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &trans  &trans  &trans  &bt BT_CLR
+&kp C_VOL_DN   &kp C_VOL_UP   &kp K_MUTE     &trans         &trans           &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+                              &trans         &trans         &bootloader      &trans          &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             label = "adm";
         };
     };
