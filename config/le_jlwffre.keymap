@@ -265,10 +265,10 @@
 
         num_sym {
             bindings = <
-&kp N1               &kp N2            &kp N3              &kp PLUS              &kp MINUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp UNDER        &kp PLUS              &kp TILDE
-&hml LCTRL NUMBER_4  &hml LEFT_ALT N5  &hml LGUI NUMBER_6  &hsl LEFT_SHIFT STAR  &kp SLASH      &kp LEFT_BRACKET      &hsr RIGHT_SHIFT RIGHT_BRACKET  &hmr RGUI MINUS  &hmr RIGHT_ALT EQUAL  &hmr RCTRL GRAVE
-&kp N7               &kp N8            &kp N9              &kp N0                &kp LG(DOT)    &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LESS_THAN    &kp GREATER_THAN      &kp BSLH
-                                       &lt 6 LS(TAB)       &trans                &trans         &lt 6 LA(DELETE)                                      &trans
+&kp N0                  &kp NUMBER_1            &kp NUMBER_2   &kp NUMBER_3        &kp PLUS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp UNDER        &kp PLUS              &kp TILDE
+&hml LCTRL KP_MULTIPLY  &hml LEFT_ALT NUMBER_4  &hml LGUI N5   &hsl LEFT_SHIFT N6  &kp MINUS         &kp LEFT_BRACKET      &hsr RIGHT_SHIFT RIGHT_BRACKET  &hmr RGUI MINUS  &hmr RIGHT_ALT EQUAL  &hmr RCTRL GRAVE
+&kp LG(KP_DIVIDE)       &kp N7                  &kp N8         &kp N9              &kp RG(KP_DOT)    &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LESS_THAN    &kp GREATER_THAN      &kp BSLH
+                                                &lt 6 LS(TAB)  &trans              &trans            &lt 6 LA(DELETE)                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -287,10 +287,10 @@
 
         nav_fn {
             bindings = <
-&mt LSHIFT PG_UP            &mt LEFT_ALT HOME  &mt LC(LSHIFT) UP_ARROW  &mt LEFT_ALT END     &kp LS(LA(LC(BACKSLASH)))    &trans            &kp F9         &kp F10       &kp F11            &kp F12
-&mt LC(LEFT_CONTROL) PG_DN  &kp LEFT_ARROW     &kp DOWN_ARROW           &kp RIGHT_ARROW      &bksp_del                    &trans            &hsr RSHFT F5  &hmr RGUI F6  &hmr RIGHT_ALT F7  &hmr RCTRL F8
-&kp LG(Z)                   &kp LG(X)          &kp LG(C)                &kp LG(V)            &kp LG(LS(K))                &trans            &kp F1         &kp F2        &kp F3             &kp F4
-                                               &trans                   &lt 6 LA(BACKSPACE)  &trans                       &lt 6 LA(DELETE)                 &trans
+&mt LSHIFT PG_UP            &mt LEFT_ALT HOME  &mt LC(LSHIFT) UP_ARROW  &mt LEFT_ALT END     &kp LS(LA(LC(BACKSLASH)))    &trans  &kp F9         &kp F10       &kp F11            &kp F12
+&mt LC(LEFT_CONTROL) PG_DN  &kp LEFT_ARROW     &kp DOWN_ARROW           &kp RIGHT_ARROW      &bksp_del                    &trans  &hsr RSHFT F5  &hmr RGUI F6  &hmr RIGHT_ALT F7  &hmr RCTRL F8
+&kp LG(Z)                   &kp LG(X)          &kp LG(C)                &kp LG(V)            &kp LG(LS(K))                &trans  &kp F1         &kp F2        &kp F3             &kp F4
+                                               &trans                   &lt 6 LA(BACKSPACE)  &trans                       &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
